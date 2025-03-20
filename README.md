@@ -13,3 +13,6 @@ alias rrt=rerost-tools
 ```
 cd $(rerost-tools fork-dir) && cursor .
 ```
+
+シェルスクリプト版
+https://gist.github.com/rerost/1d9bbebbf8c3b8727900681fa9676b8a
