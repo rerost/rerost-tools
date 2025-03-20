@@ -11,5 +11,5 @@ alias rrt=rerost-tools
 ## Tips
 複数の作業を並行して行いたい時
 ```
-cd $(rerost-tools fork-dir) && curosr .
+cd $(rerost-tools fork-dir) && cursor .
 ```
