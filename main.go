@@ -22,15 +22,19 @@ func run(
 ) error {
 	commands := map[string]Command{
 		"fork-dir": {
-			Description: "Copy current direcotry to a new directory",
-			Run:         ForkDir,
+			Description: "Copy current directory to a new directory with various subcommands:\n" +
+				"\tfork-dir\t\t- Create a new fork of current directory\n" +
+				"\tfork-dir list\t\t- List fork directories created from the current directory\n" +
+				"\tfork-dir list-all\t- List all fork directories\n" +
+				"\tfork-dir clean\t\t- Delete all created fork directories",
+			Run: ForkDir,
 		},
 	}
 
 	if len(args) < 2 {
 		stdout.Write([]byte("Usage: <command> <args>\n\n"))
 		for k, v := range commands {
-			stdout.Write([]byte(fmt.Sprintf("%s: %s\n", k, v.Description)))
+			stdout.Write([]byte(fmt.Sprintf("%s:\t%s\n", k, v.Description)))
 		}
 		return nil
 	}
